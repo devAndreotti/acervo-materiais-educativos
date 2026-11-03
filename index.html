@@ -64,7 +64,8 @@
   .card.feature .file{background:var(--feat-btn);color:var(--feat-btn-ink)}
   .badge{font-size:12px;padding:5px 11px;border-radius:999px;background:var(--chip);color:var(--chip-ink);font-weight:600;align-self:flex-start;margin-top:auto}
   /* Selo diagonal no canto superior direito do card publicado */
-  .ribbon{position:absolute;top:26px;right:-46px;width:190px;text-align:center;transform:rotate(45deg);background:var(--ribbon);color:var(--ribbon-ink);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:6px 0;box-shadow:0 2px 6px rgba(0,0,0,.2);pointer-events:none}
+  .ribbon{position:absolute;top:44px;right:-40px;width:170px;text-align:center;transform:rotate(45deg);background:var(--ribbon);color:var(--ribbon-ink);font-size:9px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;padding:4px 0;box-shadow:0 2px 6px rgba(0,0,0,.2);pointer-events:none;white-space:nowrap;line-height:1.2}
+  .card.has-ribbon .meta{padding-right:64px}
   footer{border-top:1px solid var(--line);padding:26px 0 36px;font-size:14px;color:var(--muted)}
 
   /* Tablet */
@@ -123,7 +124,7 @@
       </div>
     </article>
 
-    <article class="card open feature" data-tema="ambiente">
+    <article class="card open feature has-ribbon" data-tema="ambiente">
       <span class="ribbon" aria-hidden="true">Publicado no LinkedIn</span>
       <div class="meta"><span>Meio ambiente</span><span>ODS 12 e 13</span></div>
       <h2>Falha de Sistema</h2>
