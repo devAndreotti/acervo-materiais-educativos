@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acervo de materiais educativos</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="description" content="Cartilhas, ebooks e infográficos gratuitos sobre segurança digital, finanças, IA e meio ambiente.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +35,23 @@
     --ods:#e0a07f;--ribbon:#d2734e;--ribbon-text:#0d1117;--shadow:rgba(0,0,0,.45);
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;transition:background .2s,color .2s;-webkit-font-smoothing:antialiased}
+  body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+  /* Transição suave só durante a troca de tema (classe removida ao fim) */
+  html.trocando body,
+  html.trocando header,
+  html.trocando footer,
+  html.trocando .card,
+  html.trocando .tab,
+  html.trocando .file,
+  html.trocando .badge,
+  html.trocando .btn-tema,
+  html.trocando .ribbon,
+  html.trocando .meta,
+  html.trocando .card h2,
+  html.trocando .card p,
+  html.trocando .kicker,
+  html.trocando h1,
+  html.trocando .lead{transition:background-color .45s ease,color .45s ease,border-color .45s ease,fill .45s ease,stroke .45s ease,box-shadow .45s ease}
   .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
   header.hero{background:var(--surface);border-bottom:1px solid var(--line)}
   .topo{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:40px 0 34px}
@@ -200,10 +217,14 @@
       btn.setAttribute('aria-pressed', escuro ? 'true' : 'false');
     }
     aplicar(root.getAttribute('data-theme'));
+    var fim = null;
     btn.addEventListener('click', function () {
       var novo = root.getAttribute('data-theme') === 'escuro' ? 'claro' : 'escuro';
       try { localStorage.setItem('acervo-tema', novo); } catch (e) {}
+      root.classList.add('trocando');
+      clearTimeout(fim);
       aplicar(novo);
+      fim = setTimeout(function () { root.classList.remove('trocando'); }, 500);
     });
   })();
 </script>
