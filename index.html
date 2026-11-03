@@ -87,7 +87,8 @@
   .card.feature .file{background:var(--feat-btn);color:var(--feat-btn-text)}
   .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 10px;border-radius:6px;background:var(--chip);color:var(--chip-text);font-weight:600;align-self:flex-start;margin-top:auto}
   .badge svg{width:13px;height:13px}
-  .ribbon{position:absolute;top:44px;right:-40px;width:170px;text-align:center;transform:rotate(45deg);background:var(--ribbon);color:var(--ribbon-text);font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none;white-space:nowrap;line-height:1.2}
+  .ribbon{position:absolute;top:44px;right:-40px;width:170px;text-align:center;transform:rotate(45deg);background:var(--ribbon);color:var(--ribbon-text);font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;box-shadow:0 2px 6px rgba(0,0,0,.18);white-space:nowrap;line-height:1.2;text-decoration:none}
+  .ribbon:hover{filter:brightness(1.08)}
   footer{border-top:1px solid var(--line);padding:24px 0 36px;font-size:14px;color:var(--muted);background:var(--surface)}
   @media (min-width:640px){
     .topo{padding:56px 0 44px}
@@ -133,18 +134,20 @@
 
   <section class="grid" id="acervo">
 
-    <article class="card open feature" data-tema="seguranca">
+    <article class="card open feature has-ribbon" data-tema="seguranca">
+      <a class="ribbon" href="https://lnkd.in/p/dtDYJXrd" target="_blank" rel="noopener" aria-label="Ver publicação no LinkedIn">Publicado no LinkedIn</a>
       <div class="meta"><span>Segurança digital</span><span>ODS 10 e 16</span></div>
       <h2>Escudo Digital</h2>
       <p>Golpes do Pix, falsa central bancária, WhatsApp clonado e pixels espiões em e-mails, com roteiro de primeiros passos após uma fraude.</p>
       <div class="files">
         <a class="file" href="materiais/escudo-digital-cartilha.pdf" onclick="window.goatcounter&&goatcounter.count({path:'download-escudo-digital-cartilha',title:'Download: Escudo Digital (cartilha)',event:true})"><span>Cartilha</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Baixar PDF" role="img"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></a>
         <a class="file" href="materiais/escudo-digital-infografico.pdf" onclick="window.goatcounter&&goatcounter.count({path:'download-escudo-digital-infografico',title:'Download: Escudo Digital (infográfico)',event:true})"><span>Infográfico</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Baixar PDF" role="img"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></a>
+        <a class="file" href="https://docs.google.com/forms/d/e/1FAIpQLSdXQmKsKIR5s4ARGy72Wz8gVqRpC85SgdOjl5UVwyinDmEcLg/viewform" target="_blank" rel="noopener" onclick="window.goatcounter&&goatcounter.count({path:'pesquisa-escudo-digital',title:'Clique: pesquisa Escudo Digital',event:true})"><span>Pesquisa de feedback</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Abrir formulário" role="img"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
       </div>
     </article>
 
     <article class="card open feature has-ribbon" data-tema="ambiente">
-      <span class="ribbon" aria-hidden="true">Publicado no LinkedIn</span>
+      <a class="ribbon" href="https://lnkd.in/p/dihA5aku" target="_blank" rel="noopener" aria-label="Ver publicação no LinkedIn">Publicado no LinkedIn</a>
       <div class="meta"><span>Meio ambiente</span><span>ODS 12 e 13</span></div>
       <h2>Falha de Sistema</h2>
       <p>Lixo eletrônico, da extração mineral à economia circular de hardware: impactos, PNRS, logística reversa e sanitização de dados.</p>
