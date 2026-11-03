@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acervo de Materiais Educativos</title>
+<meta name="description" content="Cartilhas, ebooks e infográficos gratuitos sobre segurança digital, finanças, IA e meio ambiente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Contagem de acessos (GoatCounter). Troque CODIGO pelo código da sua conta em goatcounter.com -->
+<script data-goatcounter="https://CODIGO.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+  :root{--bg:#f6f3ec;--card:#fffdf8;--ink:#1b1f24;--muted:#5b6660;--line:#e2dbcc;--green:#1d4f3b;--green-2:#2f6b52;--sand:#ebe6da;--clay:#b5552f}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header.hero{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  h1{font-family:Fraunces,Georgia,serif;font-size:56px;line-height:1.05;font-weight:800;margin:14px 0 14px;max-width:820px}
+  .lead{font-size:18px;color:#3a4640;max-width:700px;margin:0}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 28px}
+  .tab{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer}
+  .tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding-bottom:64px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .15s,box-shadow .15s}
+  .card.open:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(27,31,36,.25)}
+  .card.locked{opacity:.7}
+  .card.feature{background:var(--green);color:#f6f3ec;border-color:var(--green)}
+  .meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--clay);font-weight:600}
+  .card.feature .meta{color:#bfe3cf}
+  .card h2{font-family:Fraunces,Georgia,serif;font-size:24px;line-height:1.2;margin:0}
+  .card p{margin:0;font-size:15px;color:var(--muted)}
+  .card.feature p{color:#d7ebdf}
+  .files{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+  .file{display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:var(--green);background:var(--sand);padding:11px 14px;border-radius:10px;font-size:14px;font-weight:600}
+  .file:hover{background:#ddd5c2}
+  .card.feature .file{background:#f6f3ec;color:var(--green)}
+  .badge{font-size:12px;padding:5px 11px;border-radius:999px;background:var(--sand);color:#5b5448;font-weight:600;align-self:flex-start}
+  .card.feature .badge{background:#f6f3ec;color:var(--green)}
+  footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:14px;color:var(--muted)}
+  [hidden]{display:none!important}
+  @media (max-width:640px){h1{font-size:40px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Ciência da Computação · Materiais educativos</div>
+    <h1>Acervo de materiais educativos</h1>
+    <p class="lead">Cartilhas, ebooks e infográficos gratuitos para consulta e compartilhamento. Cada material traz as fontes utilizadas e pode ser baixado em PDF.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="tabs" role="tablist" aria-label="Filtrar por tema">
+    <button class="tab" role="tab" aria-selected="true" data-filter="todos">Todos</button>
+    <button class="tab" role="tab" aria-selected="false" data-filter="seguranca">Segurança digital</button>
+    <button class="tab" role="tab" aria-selected="false" data-filter="financas">Finanças</button>
+    <button class="tab" role="tab" aria-selected="false" data-filter="ia">IA e dados</button>
+    <button class="tab" role="tab" aria-selected="false" data-filter="ambiente">Meio ambiente</button>
+  </nav>
+
+  <section class="grid" id="acervo">
+
+    <article class="card open feature" data-tema="seguranca">
+      <div class="meta"><span>Segurança digital</span><span>ODS 10 e 16</span></div>
+      <h2>Escudo Digital</h2>
+      <p>Golpes do Pix, falsa central bancária, WhatsApp clonado e pixels espiões em e-mails, com roteiro de primeiros passos após uma fraude.</p>
+      <div class="files">
+        <a class="file" href="materiais/escudo-digital-cartilha.pdf" onclick="window.goatcounter&&goatcounter.count({path:'download-escudo-digital-cartilha',title:'Download: Escudo Digital (cartilha)',event:true})"><span>Cartilha</span><span>PDF ↓</span></a>
+        <a class="file" href="materiais/escudo-digital-infografico.pdf" onclick="window.goatcounter&&goatcounter.count({path:'download-escudo-digital-infografico',title:'Download: Escudo Digital (infográfico)',event:true})"><span>Infográfico</span><span>PDF ↓</span></a>
+      </div>
+    </article>
+
+    <article class="card open feature" data-tema="ambiente">
+      <div class="meta"><span>Meio ambiente</span><span>ODS 12 e 13</span></div>
+      <h2>Falha de Sistema</h2>
+      <p>Lixo eletrônico, da extração mineral à economia circular de hardware: impactos, PNRS, logística reversa e sanitização de dados.</p>
+      <div class="files">
+        <a class="file" href="materiais/falha-de-sistema-ebook.pdf" onclick="window.goatcounter&&goatcounter.count({path:'download-falha-de-sistema-ebook',title:'Download: Falha de Sistema (ebook)',event:true})"><span>Ebook</span><span>PDF ↓</span></a>
+      </div>
+      <span class="badge">Publicado no LinkedIn</span>
+    </article>
+
+    <article class="card locked" data-tema="ia">
+      <div class="meta"><span>IA e dados</span><span>ODS 8 e 9</span></div>
+      <h2>IA no Balcão</h2>
+      <p>Ferramentas gratuitas de inteligência artificial para microempreendedores e pequenos comércios.</p>
+      <span class="badge">Em breve</span>
+    </article>
+
+    <article class="card locked" data-tema="financas">
+      <div class="meta"><span>Finanças</span><span>ODS 1 e 8</span></div>
+      <h2>Mapa da Virada</h2>
+      <p>Educação financeira, renegociação de dívidas e orçamento familiar.</p>
+      <span class="badge">Em breve</span>
+    </article>
+
+    <article class="card locked" data-tema="seguranca">
+      <div class="meta"><span>Segurança digital</span><span>ODS 3, 4 e 16</span></div>
+      <h2>Escudo Infantil Digital</h2>
+      <p>Proteção de crianças e adolescentes em redes sociais e jogos online.</p>
+      <span class="badge">Em breve</span>
+    </article>
+
+    <article class="card locked" data-tema="ia">
+      <div class="meta"><span>IA e dados</span><span>ODS 3 e 9</span></div>
+      <h2>A Fronteira Algorítmica da Saúde</h2>
+      <p>IA, proteção de dados clínicos e humanização do cuidado.</p>
+      <span class="badge">Em breve</span>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Materiais de livre consulta e compartilhamento · Dúvidas e sugestões são bem-vindas.</div>
+</footer>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.tab');
+    var cards = document.querySelectorAll('#acervo .card');
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        var f = t.getAttribute('data-filter');
+        tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        cards.forEach(function (c) {
+          c.hidden = !(f === 'todos' || c.getAttribute('data-tema') === f);
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
